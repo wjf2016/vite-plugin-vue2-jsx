@@ -1,11 +1,16 @@
 # @vitejs/plugin-vue2-jsx [![npm](https://img.shields.io/npm/v/@vitejs/plugin-vue2-jsx.svg)](https://npmjs.com/package/@vitejs/plugin-vue2-jsx)
 
+[中文文档](./README.zh-CN.md)
+
+> [!NOTE]
+> This is a community-maintained fork of the official [@vitejs/plugin-vue2-jsx](https://github.com/vitejs/vite-plugin-vue2-jsx), which has been abandoned by the Vue team. This fork adapts the plugin to work with **Vite 8**, so that Vue 2 projects can also benefit from the performance improvements brought by the latest Vite version.
+
 > [!CAUTION]
-> Vue 2 has reached EOL, and this project is no longer actively maintained.
+> Vue 2 has reached EOL, and the official plugin is no longer actively maintained.
 
 ---
 
-Provides Vue 2 JSX & TSX support with HMR.
+Provides Vue 2 JSX & TSX support with HMR, requires Vite 8.
 
 ```js
 // vite.config.js
@@ -19,6 +24,11 @@ export default {
   ]
 }
 ```
+
+## What's Changed in v2.0.0
+
+- Requires Vite 8 (`peerDependencies` updated)
+- Switched JSX/TSX transform from `esbuild` to `oxc` (Vite 8 replaced esbuild with OXC as the default transformer)
 
 ## Options
 

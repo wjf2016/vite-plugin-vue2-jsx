@@ -46,13 +46,13 @@ function vue2JsxPlugin(options: Options = {}): Plugin {
     name: 'vite:vue2-jsx',
 
     config(config) {
+      // only apply oxc to ts files
+      // since we are handling jsx and tsx now
       return {
-        // only apply esbuild to ts files
-        // since we are handling jsx and tsx now
-        esbuild: {
+        oxc: {
           include: /\.ts$/
         }
-      }
+      } as any
     },
 
     configResolved(config) {
